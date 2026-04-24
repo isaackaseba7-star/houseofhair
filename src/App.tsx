@@ -103,13 +103,15 @@ const Navbar = ({ onOpenBooking }: { onOpenBooking: () => void }) => {
 const Hero = ({ onOpenBooking }: { onOpenBooking: () => void }) => {
   return (
     <section className="relative h-screen min-h-[600px] flex items-center pt-20">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-charcoal">
         <img 
-          src="https://images.unsplash.com/photo-1615813967515-e1838c1c5641?q=80&w=2000&auto=format&fit=crop" 
-          alt="Luxury Hair Salon" 
-          className="w-full h-full object-cover object-center"
+          src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format,compress&fit=crop&w=1920&q=80" 
+          alt="Stylish African woman with beautiful hair in a premium salon" 
+          className="w-full h-full object-cover object-[center_20%]"
+          fetchPriority="high"
+          loading="eager"
         />
-        <div className="absolute inset-0 bg-charcoal/40"></div>
+        <div className="absolute inset-0 bg-charcoal/50"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -335,7 +337,7 @@ const Gallery = () => {
     "https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     "https://images.unsplash.com/photo-1620331311520-24c4bd2fc990?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    "https://images.unsplash.com/photo-1595475884562-073c18845a7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   ];
 
   return (

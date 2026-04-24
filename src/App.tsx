@@ -105,7 +105,7 @@ const Hero = ({ onOpenBooking }: { onOpenBooking: () => void }) => {
     <section className="relative h-screen min-h-[600px] flex items-center pt-20">
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1595475884562-073c18845a7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+          src="https://images.unsplash.com/photo-1615813967515-e1838c1c5641?q=80&w=2000&auto=format&fit=crop" 
           alt="Luxury Hair Salon" 
           className="w-full h-full object-cover object-center"
         />
@@ -469,9 +469,8 @@ const Contact = ({ onOpenBooking }: { onOpenBooking: () => void }) => {
           </motion.div>
         </div>
 
-        {/* Map Placeholder */}
-        <div className="mt-16 bg-gray-200 w-full h-[400px] border border-charcoal/10 grayscale opacity-80 hover:grayscale-0 transition-all duration-500">
-           {/* Using an iframe to embed Google Map based on location string */}
+        {/* Map Embedding */}
+        <div className="mt-16 w-full h-[400px] md:h-[500px] border border-charcoal/20 shadow-lg overflow-hidden">
           <iframe 
             width="100%" 
             height="100%" 
@@ -479,13 +478,9 @@ const Contact = ({ onOpenBooking }: { onOpenBooking: () => void }) => {
             loading="lazy" 
             allowFullScreen 
             referrerPolicy="no-referrer-when-downgrade" 
-            src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_MAPS_API_KEY || ''}&q=Agora+Village,+Thabo+Mbeki+Rd,+Lusaka,+Zambia`}
+            src="https://maps.google.com/maps?q=Agora+Village,+Thabo+Mbeki+Rd,+Lusaka,+Zambia&t=&z=15&ie=UTF8&iwloc=&output=embed"
             title="House of Hair Location"
           ></iframe>
-          {/* Note: Google Maps embed won't work perfectly without an API key, fallback styling implies map area */}
-          <div className="h-full w-full flex items-center justify-center bg-charcoal/5">
-             <p className="text-charcoal/50 font-serif z-0 absolute">View on Google Maps</p>
-          </div>
         </div>
       </div>
     </section>
